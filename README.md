@@ -6,22 +6,38 @@
 * [Access Controls in Squid](https://wiki.squid-cache.org/SquidFaq/SquidAcl)
 * (http://soad1982.blogspot.com/2013/05/squid-proxy-on-aws.html)
 
-## Create User
 
-sudo htpasswd /etc/squid3/passwd ${USERNAME}
 
-sudo systemctl restart squid
 
-docker run --name squid -d --restart=always \
-  --publish 3128:3128 \
-  --volume /path/to/squid.whitelist:/etc/squid/squid.whitelist \
-  safakulusoy/squid-forward-proxy:latest
+## Docker
 
-See Squid Logs
+```
+# Build container image
+docker build -t safakulusoy/squid-forward-proxy .
+
+# Run container
+docker run -it --name squid -d --restart=always --publish 3128:3128 \
+--volume ${PWD}/squid.whitelist:/etc/squid/squid.whitelist \
+safakulusoy/squid-forward-proxy:latest
+
+# See Squid logs
 docker exec -it squid tail -f /var/log/squid/access.log
 
-Squid Bash
+# Squid bash
 docker exec -it squid bash
+```
+
+## Create User
+```
+sudo apt install apache2-utils
+
+# 1st user
+sudo htpasswd -cb squid.passwords ${SQUIDUSERNAME} ${SQUIDPASSWORD}
+
+# Other users
+sudo htpasswd -b squid.passwords ${SQUIDUSERNAME2} ${SQUIDPASSWORD2}  
+```
+
 
 Temporary Documents
 * [Install Docker to Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
