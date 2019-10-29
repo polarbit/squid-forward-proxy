@@ -4,6 +4,7 @@
 * [Alpine - Setting up Explicit Squid Proxy](https://wiki.alpinelinux.org/wiki/Setting_up_Explicit_Squid_Proxy)
 * [Alpine Linux Docker Image](https://hub.docker.com/_/alpine)
 * [Access Controls in Squid](https://wiki.squid-cache.org/SquidFaq/SquidAcl)
+* [How Squid ACLs work](https://workaround.org/squid-acls)
 
 ---
 
