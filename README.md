@@ -6,7 +6,6 @@
 * [Access Controls in Squid](https://wiki.squid-cache.org/SquidFaq/SquidAcl)
 * [How Squid ACLs work](https://workaround.org/squid-acls)
 
----
 
 ### Create Users
 ```
@@ -19,7 +18,6 @@ sudo htpasswd -cb squid.passwords ${SQUIDUSERNAME} ${SQUIDPASSWORD}
 sudo htpasswd -b squid.passwords ${SQUIDUSERNAME2} ${SQUIDPASSWORD2}  
 ```
 
----
 
 ### Build and Run Docker Container
 
@@ -41,7 +39,6 @@ docker exec -it squid tail -f /var/log/squid/access.log
 docker exec -it squid bash
 ```
 
----
 
 ## Test
 ```
