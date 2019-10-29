@@ -24,6 +24,8 @@ sudo htpasswd -cb squid.passwords ${SQUIDUSERNAME} ${SQUIDPASSWORD}
 sudo htpasswd -b squid.passwords ${SQUIDUSERNAME2} ${SQUIDPASSWORD2}  
 ```
 
+> If htpasswd is not installed yet, install it first.
+> `sudo apt install apache2-utils`
 
 ### Build and Run Docker Container
 
@@ -46,7 +48,7 @@ docker exec -it squid bash
 ```
 
 
-## Test
+### Test
 ```
 wget http://postman-echo.com/get?name=safak -e use_proxy=yes -e http_proxy=http://${SQUIDUSERNAME}:${SQUIDPASSWORD}@localhost:3128
 ```
