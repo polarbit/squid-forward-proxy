@@ -7,8 +7,6 @@
 * (http://soad1982.blogspot.com/2013/05/squid-proxy-on-aws.html)
 
 
-
-
 ## Docker
 
 ```
@@ -27,7 +25,8 @@ docker exec -it squid tail -f /var/log/squid/access.log
 docker exec -it squid bash
 ```
 
-## Create User
+
+## Create Users
 ```
 sudo apt install apache2-utils
 
@@ -38,6 +37,11 @@ sudo htpasswd -cb squid.passwords ${SQUIDUSERNAME} ${SQUIDPASSWORD}
 sudo htpasswd -b squid.passwords ${SQUIDUSERNAME2} ${SQUIDPASSWORD2}  
 ```
 
+
+## Test
+```
+wget http://postman-echo.com/get?name=safak -e use_proxy=yes -e http_proxy=http://${SQUIDUSERNAME}:${SQUIDPASSWORD}@localhost:3128
+```
 
 Temporary Documents
 * [Install Docker to Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
