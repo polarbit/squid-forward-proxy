@@ -25,7 +25,8 @@ sudo htpasswd -b squid.passwords ${SQUIDUSERNAME2} ${SQUIDPASSWORD2}
 ```
 
 > If htpasswd is not installed yet, install it first.
-> sudo apt install apache2-utils
+>
+> `sudo apt install apache2-utils`
 
 ### Build and Run Docker Container
 
