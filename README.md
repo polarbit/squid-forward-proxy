@@ -1,5 +1,11 @@
 # squid-forward-proxy
 
+Some key features:
+* Only allowes access to domains specifies in the `squid.whitelist` file.
+* Basic http authentication is builtin. And users can be added later. (Container restart is required.)
+* You can change `squid.conf` file for your custome settings.  (Container restart is required.)
+
+
 **See Resources:**
 * [Alpine - Setting up Explicit Squid Proxy](https://wiki.alpinelinux.org/wiki/Setting_up_Explicit_Squid_Proxy)
 * [Alpine Linux Docker Image](https://hub.docker.com/_/alpine)
