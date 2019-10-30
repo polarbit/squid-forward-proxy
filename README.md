@@ -11,6 +11,7 @@ Some key features:
 * [Alpine Linux Docker Image](https://hub.docker.com/_/alpine)
 * [Access Controls in Squid](https://wiki.squid-cache.org/SquidFaq/SquidAcl)
 * [How Squid ACLs work](https://workaround.org/squid-acls)
+* [sameersbn/squid](https://github.com/sameersbn/docker-squid)
 
 
 ### Create Users
