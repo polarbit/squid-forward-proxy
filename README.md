@@ -51,7 +51,9 @@ docker exec -it squid bash
 
 ### Test
 ```
-wget http://postman-echo.com/get?name=safak -e use_proxy=yes -e http_proxy=http://${SQUIDUSERNAME}:${SQUIDPASSWORD}@localhost:3128
+wget http://postman-echo.com/get?name=houston \
+-e use_proxy=yes \
+-e http_proxy=http://${SQUIDUSERNAME}:${SQUIDPASSWORD}@localhost:3128
 ```
 
 
