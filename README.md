@@ -11,6 +11,7 @@ Some key features:
 * [Alpine Linux Docker Image](https://hub.docker.com/_/alpine)
 * [Access Controls in Squid](https://wiki.squid-cache.org/SquidFaq/SquidAcl)
 * [How Squid ACLs work](https://workaround.org/squid-acls)
+* [sameersbn/squid](https://github.com/sameersbn/docker-squid)
 
 
 ### Create Users
@@ -51,7 +52,9 @@ docker exec -it squid bash
 
 ### Test
 ```
-wget http://postman-echo.com/get?name=safak -e use_proxy=yes -e http_proxy=http://${SQUIDUSERNAME}:${SQUIDPASSWORD}@localhost:3128
+wget http://postman-echo.com/get?name=houston \
+-e use_proxy=yes \
+-e http_proxy=http://${SQUIDUSERNAME}:${SQUIDPASSWORD}@localhost:3128
 ```
 
 
